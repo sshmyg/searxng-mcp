@@ -10,4 +10,4 @@ RUN pnpm install --frozen-lockfile
 COPY tsconfig.json ./
 COPY src ./src
 
-CMD ["pnpm", "dev"]
+CMD ["pnpm", "start"]
