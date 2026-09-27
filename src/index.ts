@@ -6,10 +6,20 @@ import { env } from './config.ts';
 import { registerWebSearchTool } from './tools/web-search.ts';
 
 function createMcpServer(): McpServer {
-  const mcp = new McpServer({
-    name: 'searxng-mcp',
-    version: '1.0.0',
-  });
+  const mcp = new McpServer(
+    {
+      name: 'searxng-mcp',
+      version: '1.0.0',
+    },
+    {
+      instructions: [
+        'Use web_search for current, recent, or time-sensitive information.',
+        'Prefer one broad search query first.',
+        'Only perform additional searches when the initial results are insufficient or conflicting.',
+        'Use the URLs returned by search results as source references when relevant.',
+      ].join(' '),
+    },
+  );
 
   registerWebSearchTool(mcp);
 
