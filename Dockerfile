@@ -6,7 +6,7 @@ RUN corepack enable
 
 COPY package.json pnpm-lock.yaml ./
 
-RUN corepack install
+RUN npm install -g pnpm@11.22.0
 RUN pnpm install --frozen-lockfile
 
 COPY tsconfig.json ./
