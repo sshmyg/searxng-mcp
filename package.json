@@ -1,0 +1,29 @@
+{
+  "name": "searxng-mcp",
+  "version": "1.0.0",
+  "description": "A minimal MCP server for SearXNG web search.",
+  "type": "module",
+  "main": "index.js",
+  "packageManager": "pnpm@11.22.0",
+  "author": "Serhii Shmyg",
+  "license": "MIT",
+  "scripts": {
+    "start": "node --watch --env-file=.env src/index.ts",
+    "ts": "tsc --noEmit"
+  },
+  "keywords": [
+    "searxng",
+    "mcp",
+    "searxng-mcp"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/node": "2.1.0",
+    "@modelcontextprotocol/server": "2.1.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.3",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}

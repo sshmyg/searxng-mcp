@@ -1,0 +1,11 @@
+services:
+  searxng-mcp:
+    build: .
+    container_name: searxng-mcp
+    restart: unless-stopped
+
+    env_file:
+      - .env
+
+    ports:
+      - '3344:3344'
